@@ -35,6 +35,7 @@ namespace NBSGUI
             if (clear)
             {
                 Console.Clear();
+                
             }
             else
             {
