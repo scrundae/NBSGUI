@@ -6,42 +6,45 @@ using System.Net.Http.Headers;
 
 namespace NBSGUI
 {
-    public class Frame
+    namespace Controls
     {
-        public Frame(string? qTitle = null, string? qText = null)
+        public class Frame
         {
-            if(qTitle != null)
+            public Frame(string? qTitle = null, string? qText = null)
             {
-                Title = qTitle;
-            }
-            else
-            {
-                
-            }
-            if (qText != null)
-            {
-                Text = qText;
-            }
-            else
-            {
+                if (qTitle != null)
+                {
+                    Title = qTitle;
+                }
+                else
+                {
 
+                }
+                if (qText != null)
+                {
+                    Text = qText;
+                }
+                else
+                {
+
+                }
             }
-        }
-        public string Title;
-        public string Text;
-        public void Show(bool clear = true)
-        {
-            if (clear)
+            public string Title;
+            public string Text;
+            public void Show(bool clear = true)
             {
-                Console.Clear();
-                
+                if (clear)
+                {
+                    Console.Clear();
+
+                }
+                else
+                {
+
+                }
+                Console.WriteLine("[" + Title + "]");
+                Console.WriteLine(Text);
             }
-            else
-            {
-                
-            }
-            Console.WriteLine("[" + Title + "]");
-            Console.WriteLine(Text);
         }
     }
 }
