@@ -29,7 +29,6 @@ namespace NBSGUI
         }
         public string Title;
         public string Text;
-        public Vector2 Transform = new Vector2();
         public void Show(bool clear = true)
         {
             if (clear)
